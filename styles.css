@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    background-color: white;
+
+    display: flex;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    border-bottom: 2px solid grey;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#right {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+header>img {
+    height: 30px;
+}
+
+/* NAV */
+
+#login {
+    border-left: 2px solid grey;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    padding: 5px 0;
+    border-radius: 2px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.dropdowncontainer:hover .dropdown {
+    display: flex;
+}
+
+.dropdown a:hover {
+    background-color: rgba(128, 128, 128, 0.363);
+}
+
+.alternative {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.text {
+    margin-left: 5px;
+}
+
+.alternative>img {
+    height: 25px;
+    width: 25x;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.text>h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.text>p {
+    font-size: 15px;
+    margin: 0;
+    color: gray;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1000px;
+    flex-grow: 2;
+}
+
+/* FOOTER*/
+
+footer {
+    max-width: 1200px;
+}
