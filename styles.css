@@ -90,10 +90,9 @@ header>img {
 /* PRODUCT */
 
 .alternative {
-    position: relative;
     display: flex;
     align-items: center;
-    width: 300px;
+    width: 270px;
 }
 
 .text {
@@ -101,23 +100,23 @@ header>img {
 }
 
 .alternative>img {
-    height: 25px;
-    width: 25x;
+    height: 20px;
+    width: 20x;
     border: 1px solid #999999;
     border-radius: 5px;
     padding: 5px;
 }
 
-.text>h1 {
-    font-size: 18px;
+.h1 {
+    font-size: 15px;
     margin: 0;
     font-weight: 500;
 }
 
-.text>p {
+.p {
+    font-size: 12px;
     margin: 0;
     color: #666666;
-
 }
 
 /* TEAMS & INDIVIDUALS */
@@ -168,6 +167,8 @@ main {
     margin-left: 100px;
 }
 
+/* COMPANYLOGOS */
+
 #companylogos {
     text-align: center;
     border-bottom: 2px solid #e5e5e5;
@@ -175,13 +176,46 @@ main {
 }
 
 #companylogos>img {
-    height: 25px;
-    margin: 10px;
+    height: 23px;
+    margin: 12px;
 }
+
+/* PARTS WITH SAME STRUCTURE */
 
 #two>img {
     width: 100%;
+    box-shadow: 10px 10px 10px 10px #f4f4f4;
+    margin-top: 40px;
 }
+
+.heading {
+    width: 48%;
+    margin-top: 75px;
+}
+
+.heading>p {
+    font-size: 16px;
+    margin: 0;
+    color: #666666;
+}
+
+.quote {
+    font-size: 37px;
+    color: #7f7f7f;
+    text-align: center;
+    font-weight: 500;
+}
+
+.person {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.person>img {
+    height: 50px;
+}
+
 
 /* FOOTER*/
 
