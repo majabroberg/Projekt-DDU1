@@ -182,7 +182,7 @@ main {
 
 /* PARTS WITH SAME STRUCTURE */
 
-#two>img {
+.two>img {
     width: 100%;
     box-shadow: 10px 10px 10px 10px #f4f4f4;
     margin-top: 40px;
@@ -199,6 +199,10 @@ main {
     color: #666666;
 }
 
+.heading>h1 {
+    margin-bottom: 10px;
+}
+
 .quote {
     font-size: 37px;
     color: #7f7f7f;
@@ -208,8 +212,8 @@ main {
 
 .person {
     display: flex;
-    text-align: center;
     justify-content: center;
+    align-items: center;
 }
 
 .person>img {
