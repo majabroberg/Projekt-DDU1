@@ -78,7 +78,7 @@ header>img {
 
 /* RIGHT ALIGNED */
 
-#line {
+.line {
     margin-top: 5px;
     height: 20px;
     border-left: 1px solid #99999993;
@@ -146,16 +146,17 @@ header>img {
     width: 200px;
 }
 
-#yourbrowser {
+.bluehover {
     color: #999999;
     text-decoration: underline;
     background-color: transparent;
 
 }
 
-#yourbrowser:hover {
+.bluehover:hover {
     color: #087fe7;
     text-decoration-color: #999999;
+    background-color: transparent;
 }
 
 /* END NAV AND HEADER */
@@ -248,6 +249,7 @@ main {
     width: 70%;
     padding: 20px;
     box-shadow: 5px 5px 5px 5px #f4f4f4;
+    margin-bottom: 70px;
 }
 
 .listpoint>img {
@@ -258,6 +260,21 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* FINAL PART */
+
+#section1 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+}
+
+.span {
+    grid-column: 1 / span 3;
 }
 
 /* FOOTER*/
