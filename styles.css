@@ -283,6 +283,7 @@ main {
 .quote {
     font-size: 37px;
     color: var(--grey);
+    font-size: var(--fortyfive);
     text-align: center;
     font-weight: 550;
 }
@@ -375,8 +376,8 @@ main {
 
 }
 
-#section2>img {
-    width: 500px;
+#badges {
+    width: 100%;
     margin: 0;
     grid-column: 3 / 5;
 
@@ -492,6 +493,17 @@ footer {
 /* FOR TABLET */
 
 @media (width <=1080px) {
+
+    body {
+        max-width: 1080px;
+    }
+
+    main {
+        margin-top: 20px;
+        max-width: 1080px;
+        box-sizing: border-box;
+    }
+
     .dropdowncontainer {
         display: none;
     }
@@ -538,7 +550,8 @@ footer {
         grid-template-rows: repeat(4, 1fr);
     }
 
-    #section2>img {
+    #badges {
+        width: 100%;
         grid-column: 3 / 5;
     }
 
@@ -553,6 +566,10 @@ footer {
 
     .align {
         grid-column: span 2;
+    }
+
+    .heading2>.getbarky {
+        display: unset;
     }
 
     #footercontainer {
@@ -571,5 +588,97 @@ footer {
         grid-template-rows: repeat(2, 1fr);
     }
 
+    footer {
+        max-width: 1080px;
+    }
+
+
+}
+
+/* FOR PHONE */
+
+@media (width <=600px) {
+
+    body {
+        max-width: 600px;
+    }
+
+    main {
+        margin-top: 20px;
+        max-width: 600px;
+        box-sizing: border-box;
+    }
+
+    .dropdowncontainer {
+        display: none;
+    }
+
+    #demo {
+        display: none;
+    }
+
+    #login {
+        display: none;
+    }
+
+    .getbarky {
+        display: none;
+    }
+
+    .line {
+        display: none;
+
+    }
+
+    .same-structure {
+        text-align: center;
+    }
+
+    .quote {
+        font-size: var(--thirtysix);
+    }
+
+    .heading {
+        font-size: var(--eighteen);
+        width: unset;
+        margin-top: 75px;
+
+    }
+
+    #section1 {
+        grid-template-columns: 1fr;
+    }
+
+    #section2 {
+        padding: 20px;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #one {
+        grid-row: 1;
+
+    }
+
+    #section2>img {
+        grid-row: 3;
+        grid-column: 1 / span 2;
+    }
+
+    #two {
+        grid-row: 2;
+    }
+
+    .align {
+        grid-row-start: unset;
+    }
+
+    .heading2>.getbarky {
+        display: unset;
+    }
+
+    footer {
+        max-width: 600px;
+    }
 
 }
