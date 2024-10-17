@@ -184,6 +184,10 @@ header>img {
     padding: 5px;
 }
 
+.dropdowncontainer:hover .hover {
+    background-color: var(--almostwhite);
+}
+
 
 /* TEAMS & INDIVIDUALS */
 
@@ -328,8 +332,6 @@ main {
     margin-bottom: 20px;
 }
 
-
-
 .list {
     box-sizing: border-box;
     background-color: #f4f4f4;
@@ -403,10 +405,6 @@ main {
     font-size: var(--twentysix);
 }
 
-#two>h1 {
-    font-size: var(--twentyfour);
-}
-
 .big {
     font-size: var(--fiftythree);
     color: var(--darkergrey);
@@ -428,8 +426,6 @@ main {
     align-items: center;
     justify-content: center;
 }
-
-
 
 /* FOOTER*/
 
@@ -643,7 +639,7 @@ footer {
         display: none;
     }
 
-    .getbarky {
+    #right>.getbarky {
         display: none;
     }
 
@@ -653,7 +649,11 @@ footer {
     }
 
     #first {
-        padding: 0 50px;
+        padding: 0 50px 50px 50px;
+    }
+
+    .companylogos {
+        padding: 25px;
     }
 
     .same-structure {
@@ -673,17 +673,16 @@ footer {
 
     #section1 {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
 
     #section2 {
-        padding: 20px;
-        grid-template-rows: repeat(3, 1fr) repeat(4, 120px);
+        grid-template-rows: 70px repeat(2, 1fr) repeat(4, 120px);
         grid-template-columns: repeat(2, 1fr);
-        margin: 0;
     }
 
     #one {
+        margin-top: 50px;
         grid-column: span 2;
 
     }
@@ -691,7 +690,7 @@ footer {
     #two {
         grid-row: 2;
         grid-column: span 2;
-        padding: 20px;
+        padding: 15px;
 
     }
 
@@ -702,9 +701,10 @@ footer {
 
     }
 
-    .heading2>.getbarky {
-        display: unset;
+    .heading2>p {
+        font-size: var(--thirteen);
     }
+
 
     footer {
         max-width: 600px;
