@@ -14,6 +14,9 @@
     --grey: #7f7f7f;
     --shadow: #e5e5e5;
     --almostwhite: #f4f4f4;
+    --boxthin: rgba(0, 0, 0, 0.1);
+    --boxthick: rgba(0, 0, 0, 0.2);
+
 
     /* FONT-SIZE */
     --twelve: 12px;
@@ -28,7 +31,12 @@
     --fortyfive: 45px;
     --fiftythree: 53px;
 
-
+    /* FONT-WEIGHT */
+    --w320: 320;
+    --w400: 400;
+    --w450: 450;
+    --w550: 550;
+    --w650: 650;
 }
 
 body {
@@ -41,15 +49,14 @@ body {
     background-color: white;
 }
 
-
 .p2 {
     font-size: var(--fifteen);
     color: var(--darkergrey);
-    font-weight: 400;
+    font-weight: var(--w400);
 }
 
 .borderbottom {
-    border-bottom: 2px solid var(--shadow);
+    border-bottom: 1px solid var(--shadow);
 }
 
 /* HEADER */
@@ -69,7 +76,7 @@ a {
     color: var(--black);
     padding: 5px;
     font-size: var(--fourteen);
-    font-weight: 450;
+    font-weight: var(--w450);
 }
 
 a:hover {
@@ -100,13 +107,13 @@ header>img {
 .h1 {
     font-size: (var(--fifteen));
     margin: 0;
-    font-weight: 450;
+    font-weight: var(--w450);
 }
 
 .p {
     font-size: var(--twelve);
     color: var(--darkergrey);
-    font-weight: 320;
+    font-weight: var(--w320);
     margin-top: 1px;
 }
 
@@ -124,7 +131,7 @@ header>img {
     border-radius: 3px;
     font-size: var(--fourteen);
     padding: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 var(--boxthin), 0 6px 20px 0 var(--boxthin);
 }
 
 .getbarky:hover {
@@ -241,7 +248,6 @@ main {
 #firstcontainer>h1 {
     font-size: var(--fortyfive);
     margin: 0;
-    font-weight: 650;
 }
 
 /* COMPANYLOGOS */
@@ -264,7 +270,7 @@ main {
 
 .same-structure>img {
     width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 var(--boxthick), 0 6px 20px 0 var(--boxthick);
     margin-top: 40px;
 }
 
@@ -277,15 +283,15 @@ main {
 
 .heading>h1 {
     margin-bottom: 10px;
-    font-weight: 650;
+    font-weight: var(--w650);
 }
 
 .quote {
     font-size: 37px;
     color: var(--grey);
-    font-size: var(--fortyfive);
+    font-size: var(--thirtysix);
     text-align: center;
-    font-weight: 550;
+    font-weight: var(--w550);
 }
 
 .person {
@@ -329,7 +335,7 @@ main {
     background-color: #f4f4f4;
     width: 70%;
     padding: 20px;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px 3px var(--boxthick);
     margin-bottom: 70px;
 }
 
@@ -359,7 +365,7 @@ main {
 }
 
 .emojibox>a {
-    font-weight: 450;
+    font-weight: var(--w450);
     color: var(--almostblack);
 }
 
@@ -404,7 +410,7 @@ main {
 .big {
     font-size: var(--fiftythree);
     color: var(--darkergrey);
-    font-weight: 650;
+    font-weight: var(--w650);
     margin: 0;
 }
 
@@ -487,7 +493,7 @@ footer {
 
 .row>p {
     margin: 0;
-    font-weight: 650;
+    font-weight: var(--w650);
 }
 
 /* FOR TABLET */
@@ -531,6 +537,10 @@ footer {
         text-align: center;
     }
 
+    .same-structure {
+        padding: 0 50px;
+    }
+
     #section1 {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -541,15 +551,13 @@ footer {
     }
 
     .emojibox>a {
-        font-weight: 450;
+        font-weight: var(--w450);
         color: var(--almostblack);
     }
 
     .top-part {
-        grid-column: unset;
+        grid-column: span 2;
     }
-
-
 
     .line2 {
         border-right: none;
@@ -644,12 +652,16 @@ footer {
 
     }
 
+    #first {
+        padding: 0 50px;
+    }
+
     .same-structure {
         text-align: center;
     }
 
     .quote {
-        font-size: var(--thirtysix);
+        font-size: var(--twentysix);
     }
 
     .heading {
@@ -666,28 +678,29 @@ footer {
 
     #section2 {
         padding: 20px;
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr) repeat(4, 120px);
         grid-template-columns: repeat(2, 1fr);
+        margin: 0;
     }
 
     #one {
-        grid-column: 1 /span 2;
+        grid-column: span 2;
+
     }
 
     #two {
         grid-row: 2;
-        grid-column: 1;
+        grid-column: span 2;
+        padding: 20px;
 
     }
 
     #badges {
         width: 100%;
-        grid-row: 2;
-        grid-column: 2;
+        grid-row: 3;
+        grid-column: span 2;
 
     }
-
-    .align {}
 
     .heading2>.getbarky {
         display: unset;
